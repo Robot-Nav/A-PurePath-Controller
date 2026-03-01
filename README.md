@@ -466,7 +466,7 @@ private:
 ```
 MIT License
 
-Copyright (c) 2024 Graceful Controller Contributors
+Copyright (c) 2026 Graceful Controller Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -501,3 +501,4 @@ copies or substantial portions of the Software.
 
 ---
 **Star 这个项目如果它对您有帮助！**
+
