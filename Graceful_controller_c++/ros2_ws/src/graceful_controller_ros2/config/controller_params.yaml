@@ -1,0 +1,37 @@
+graceful_controller:
+  ros__parameters:
+    control_frequency: 20.0
+    goal_dist_tolerance: 0.1
+    goal_angle_tolerance: 0.1
+    
+    lookahead:
+      min_lookahead: 0.25
+      max_lookahead: 1.0
+    
+    control_params:
+      k_phi: 2.0
+      k_delta: 1.0
+      beta: 0.4
+      lambda: 2.0
+    
+    velocity:
+      v_linear_min: 0.1
+      v_linear_max: 0.5
+      v_angular_max: 1.0
+      v_angular_min_in_place: 0.25
+    
+    behavior:
+      slowdown_radius: 1.5
+      initial_rotation: false
+      initial_rotation_tolerance: 0.75
+      prefer_final_rotation: true
+      rotation_scaling_factor: 0.5
+      allow_backward: false
+    
+    collision:
+      use_collision_detection: true
+      in_place_collision_resolution: 0.1
+      collision_check_radius: 0.5
+      safety_distance: 0.3
+    
+    robot_footprint: [0.3, 0.3, -0.3, 0.3, -0.3, -0.3, 0.3, -0.3]
