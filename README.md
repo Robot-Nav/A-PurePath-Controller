@@ -42,6 +42,11 @@
 - 在Gazebo/RViz中可视化测试控制器效果
 - 提供激光雷达数据输入示例
 - 演示如何将控制器集成到ROS2系统
+- 如下视频：
+- 
+
+https://github.com/user-attachments/assets/64bb4400-b882-4c37-a310-80b3e34cc027
+
 
 ##生产环境使用时，可直接移植核心库到目标平台。
 
@@ -275,8 +280,8 @@ ros2 run graceful_controller_ros2 publish_offline_path.py
 
 ---
 
-## 使用方法
-详见readme步骤
+## 测试方法
+详见文件夹中readme运行步骤
 
 
 ## 参数说明
@@ -501,4 +506,5 @@ copies or substantial portions of the Software.
 
 ---
 **Star 这个项目如果它对您有帮助！**
+
 
