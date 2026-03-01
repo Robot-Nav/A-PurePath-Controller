@@ -1,0 +1,29 @@
+
+colcon build --symlink-install
+source install/setup.bash
+
+# 终端1: Gazebo
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+
+# 终端2: 静态TF
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map odom
+
+# 终端3：启动控制器
+source ~/Graceful_controller_c++/ros2_ws/install/setup.bash
+ros2 launch graceful_controller_ros2 controller.launch.py
+
+rviz2 -d ~/Graceful_controller_c++/config/graceful_test.rviz
+
+# 终端4：发布路径
+# 发布直线路径
+ros2 run graceful_controller_ros2 publish_offline_path.py
+
+# 或发布圆形路径
+ros2 run graceful_controller_ros2 publish_offline_path.py --ros-args -p path_type:=circle
+
+# 或发布正弦波路径
+ros2 run graceful_controller_ros2 publish_offline_path.py --ros-args -p path_type:=sine
+
+# 或发布自定义路径
+ros2 run graceful_controller_ros2 publish_offline_path.py --ros-args -p path_type:=custom
